@@ -77,11 +77,9 @@ Instead of using libraries or frameworks, everything is built from scratch to de
 
 ## 🔮 Future Improvements
 
-- Dark / Light theme toggle  
 - Fake routing using History API  
 - Animations using GSAP  
 - Project data from JSON  
-- Voice assistant integration (Jarvis style 😄)  
 
 ---
 
