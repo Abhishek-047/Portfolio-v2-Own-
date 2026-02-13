@@ -1,0 +1,805 @@
+/* ============================================
+                Global Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: color .1s, background-color .5s;
+    color: inherit;
+    text-decoration: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    --primary-color: #4FC6CE;
+    --accent-01: #DBDBDB;
+    --accent-02: #98B1BA;
+    --accent-03: #26333A;
+    --accent-04: #1A2328;
+
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    background-color: var(--accent-04);
+    color: var(--accent-01);
+}
+
+body.light {
+    --primary-color: #4FC6CE;
+    --accent-01: #1D3A41;
+    --accent-02: #225B60;
+    --accent-03: #FFFFFF;
+    --accent-04: #D5F3F9;
+}
+
+.container {
+    display: grid;
+    gap: 5px;
+    max-width: 1300px;
+    padding: 50px;
+    margin: 0 auto;
+
+}
+
+.box {
+    background-color: var(--accent-03);
+    border-radius: 25px;
+}
+
+/* ============================================
+                Navigation Styles
+   ============================================ */
+
+.navbar {
+    display: grid;
+    gap: 5px;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-auto-columns: max-content;
+    grid-auto-rows: max-content;
+    position: sticky;
+    top: 50px;
+    z-index: 5;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--accent-02);
+}
+
+.navbar>div {
+    padding: 20px 0;
+    margin: 2px 0;
+}
+
+.navbar ion-icon {
+    font-size: 32px;
+    margin: auto;
+}
+
+.navbar .active,
+.navbar .item:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.divider {
+    height: 2px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.rtl {
+    background: radial-gradient(ellipse at right, var(--accent-02), transparent 70%);
+}
+
+
+/* ============================================
+                Profile Styles
+   ============================================ */
+
+.profile {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.profile .header {
+    max-height: 40vh;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    clip-path: polygon(100% 0, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 0);
+}
+
+.profile .img {
+    width: 140px;
+    position: relative;
+    margin: -90px auto 0;
+    border: var(--accent-04) 8px solid;
+    border-radius: 35px;
+
+}
+
+.profile p {
+    margin-top: 10px;
+    height: 20px;
+}
+
+.profile ul {
+    list-style-type: none;
+    margin: 30px 0 80px 0;
+}
+
+.profile ul li {
+    display: inline;
+}
+
+.profile .footer {
+    position: sticky;
+    top: calc(100vh - 100px);
+}
+
+.profile table {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.profile ion-icon {
+    color: var(--accent-02);
+    transition: color .5s, border-color .5s, background-color .5s;
+    margin-bottom: -7px;
+}
+
+.profile ul ion-icon {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--accent-04);
+}
+
+.profile ul ion-icon:hover {
+    border-color: var(--accent-04);
+}
+
+.profile ul ion-icon:hover {
+    color: var(--primary-color);
+}
+
+.profile table ion-icon {
+    padding: 5px;
+    border-radius: 10px;
+    transition: color .5s, background-color .5s;
+}
+
+.profile td:hover ion-icon {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+}
+
+/* ============================================
+            Main Content Styles
+   ============================================ */
+
+.content {
+    padding: 20px 15px 20px 20px;
+}
+
+.content h2 {
+    font-size: 2em;
+}
+
+.content p {
+    line-height: 1.5em;
+    font-size: 17px;
+}
+
+.content .wrapper {
+    overflow: auto;
+    max-height: 700px;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+}
+
+.content .wrapper::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.content .wrapper::-webkit-scrollbar-track {
+    background-color: var(--accent-04);
+}
+
+.content .wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.colored {
+    color: var(--primary-color);
+}
+
+/* ============================================
+            Achievements Styles
+   ============================================ */
+
+.section {
+    margin: 30px auto;
+}
+
+.achivements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--accent-04);
+    padding: 20px 30px;
+
+    gap: 50px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.achivements h3 {
+    font-size: 2.3em;
+    margin: auto;
+}
+
+.achivements ion-icon {
+    margin-bottom: -5px;
+    color: var(--primary-color);
+    font-size: 0.9em;
+    margin: 0 10px;
+
+}
+
+.achivements p {
+    color: var(--accent-02);
+    line-height: 1.2;
+    font: 15px;
+}
+
+/* ============================================
+                Skills Styles
+   ============================================ */
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    color: var(--accent-02);
+}
+
+.skills>div {
+    background-color: var(--accent-04);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: var(--accent-04) 3px solid;
+    transition: border-color .5s;
+    cursor: pointer;
+}
+
+.skills>div:hover {
+    border-color: var(--primary-color);
+}
+
+.skills ion-icon {
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.skills .circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    background: conic-gradient(from 0deg,
+            var(--primary-color) 0%,
+            var(--primary-color) 0% var(--percent),
+            var(--accent-03) var(--percent));
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.skills .circle::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background-color: var(--accent-04);
+    border-radius: 50%;
+}
+
+.skills .circle h4 {
+    position: relative;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 3;
+}
+
+.skills div:nth-child(7) {
+    background-color: inherit;
+}
+
+.skills .progress-bar:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.skills .progress-bar p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills progress {
+    width: 100%;
+    appearance: none;
+    height: 10px;
+}
+
+.skills progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+/* ============================================
+        Special Styles for skills section
+   ============================================ */
+#rightPanel {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.more-skills>div img {
+    width: 40%;
+    height: 40%;
+}
+
+.more-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    color: var(--accent-02);
+}
+
+.more-skills>div {
+    background-color: var(--accent-04);
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: var(--accent-04) 3px solid;
+    transition: border-color .5s;
+    cursor: pointer;
+}
+
+.more-skills>div:hover {
+    border-color: var(--primary-color);
+}
+
+.back-btn {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--accent-04);
+    color: var(--accent-02);
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+    border-color: var(--primary-color);
+}
+
+body.light .back-btn:hover {
+    background-color: var(--accent-04);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+body.light .more-skills>div:hover {
+    background-color: var(--accent-04);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* ============================================
+                Experience Styles
+   ============================================ */
+.experience {
+    margin: 15px 0;
+}
+
+.experience p {
+    padding-left: 20px;
+    border-left: var(--accent-02) 2px solid;
+    margin-left: 17px;
+    color: var(--accent-02);
+}
+
+.experience h4 {
+    padding-left: 25px;
+    position: relative;
+    color: var(--primary-color);
+    margin: 10px;
+}
+
+.experience h4::before {
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 14px;
+    height: 14px;
+    border-radius: 20px;
+    left: 0px;
+    top: 5px;
+}
+
+.experience .date {
+    padding: 5px 10px;
+    background-color: var(--accent-04);
+    border-radius: 4px;
+    color: var(--accent-02);
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ============================================
+            Streak Styles
+   ============================================ */
+
+.streak {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: var(--accent-04) 3px solid;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.streak activity-graph {
+    padding: 10px 20px;
+    color: var(--accent-02);
+    --activity-graph-text-color: var(--accent-02);
+    --activity-graph-rounded: 2px;
+    --activity-graph-level-0-bg: var(--accent-04);
+    --activity-graph-level-1-bg: #0E4545;
+    --activity-graph-level-2-bg: #006C69;
+    --activity-graph-level-3-bg: #25A0A7;
+    --activity-graph-level-4-bg: #37C9D5;
+}
+
+body.light .streak activity-graph {
+    --activity-graph-level-0-bg: #EBEDF0;
+    --activity-graph-level-1-bg: #9BE9A8;
+    --activity-graph-level-2-bg: #30C463;
+    --activity-graph-level-3-bg: #30A14E;
+    --activity-graph-level-4-bg: #216E39;
+}
+
+.streak>div {
+    overflow: auto;
+}
+
+.streak figure {
+    overflow: auto;
+}
+
+.streak table {
+    border-spacing: 2px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year-selector {
+    margin: 10px 10px;
+    background-color: var(--accent-04);
+    color: var(--accent-02);
+    border: 2px solid var(--accent-04);
+    padding: 3px 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.year-selector:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+    border-color: var(--primary-color);
+}
+
+body.light .year-selector {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+    border-color: var(--primary-color);
+}
+
+
+/* ============================================
+            Coding-links Styles
+   ============================================ */
+
+
+.coding-links a {
+    display: inline-block;
+    padding: 2px;
+    justify-content: space-evenly;
+    background-color: var(--accent-02);
+    color: var(--accent-02);
+    border-radius: 8px;
+    margin: 5px;
+    transition: background-color .5s, color .5s;
+    width: 35px;
+    height: 35px;
+}
+
+.coding-links img {
+    padding: auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+.coding-links a:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+}
+
+body.light .coding-links a {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+}
+
+/* ============================================
+            Projects Styles
+   ============================================ */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background: var(--accent-04);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 10px 0;
+
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.right p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 10px 25px;
+    border-radius: 8px;
+
+    background-color: var(--accent-03);
+    color: var(--accent-02);
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: var(--primary-color);
+    color: var(--accent-04);
+    border-color: var(--primary-color);
+}
+
+body.light .buttons button {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+    border-color: var(--primary-color);
+}
+
+
+/* ============================================
+              Contact Styles
+   ============================================ */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.map {
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px inset;
+}
+
+body:not(.light) .map {
+    filter: invert(90%) sepia(100%) hue-rotate(150deg) saturate(100%);
+}
+
+.contact .input {
+    width: 100%;
+    background-color: var(--accent-04);
+    border: var(--accent-04) 1px solid;
+    border-color: var(--primary-color);
+    color: var(--accent-02);
+    border-radius: 5px;
+    line-height: 3;
+    outline: none;
+    transition: border-color .5s;
+}
+
+.contact .input:hover,
+.contact .input:focus {
+    border: var(--primary-color) 2px solid;
+}
+
+.contact .submit {
+    background-color: var(--accent-04);
+    color: var(--accent-03);
+    border: none;
+    border-color: var(--primary-color);
+    border-radius: 5px;
+    transition: background-color .5s, filter .5s;
+    grid-column: span 2;
+    justify-self: first baseline;
+    width: 180px;
+    height: auto;
+    padding: 12px 30px;
+}
+
+.contact .input::placeholder,
+.contact .textarea::placeholder {
+    color: var(--accent-03);
+    filter: brightness(2);
+    padding-left: 10px;
+}
+
+body.light .contact .input::placeholder,
+body.light .contact .textarea::placeholder {
+    color: var(--accent-01);
+}
+
+.contact .submit:hover {
+    background: var(--primary-color);
+    color: var(--accent-04);
+    border-color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+body.light .contact .submit {
+
+    color: var(--accent-01);
+
+}
+
+body.light .contact .submit:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-01);
+    border-color: var(--primary-color);
+}
+
+
+/* ============================================
+              Responsive Styles
+   ============================================ */
+
+/* --------- Desktop --------- */
+@media screen and (width >=1024px) {
+    .container {
+        grid-template-columns: 85px 430px 1fr;
+    }
+
+    .skills div:nth-child(7) {
+        grid-column: span 2;
+    }
+
+    .projects {
+        grid-template-areas:
+            "p1 p2"
+            "p3 p3";
+    }
+}
+
+/* --------- Tablet --------- */
+
+@media screen and (width >=768px) and (width <=1023px) {
+    .container {
+        grid-template-columns: 85px 1fr;
+        max-width: 650px;
+    }
+
+    .content {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .achivements {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .skills div:nth-child(7) {
+        grid-column: 1/4;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "p1 p2"
+            "p3 p3";
+    }
+}
+
+/* --------- Mobile --------- */
+@media screen and (width <=769px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        padding: 20px;
+        padding-top: 50px;
+    }
+
+    .navbar {
+        display: inline-grid;
+        grid-template-columns: 85px 1fr;
+    }
+
+    .nav {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 5px;
+    }
+
+    .nav .divider,
+    .nav p {
+        display: none;
+    }
+
+    .navbar>.div {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+            rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    .achivements {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills div:nth-child(7) {
+        grid-column: 1/3;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}

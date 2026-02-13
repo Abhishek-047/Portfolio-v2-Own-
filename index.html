@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@mariohamann/activity-graph/dist/activity-graph.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!------ Navigation ------>
+        <nav class="navbar">
+            <div class="box theme">
+                <div class="item" onclick="theme()">
+                    <ion-icon id="lightBtn" name="sunny-outline"></ion-icon>
+                    <ion-icon id="darkBtn" name="moon-outline" style="display: none;"></ion-icon>
+                </div>
+            </div>
+            <div class="box nav">
+                <div class="item active">
+                    <a href="#about">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <p>about</p>
+                    </a>
+                </div>
+                <div class="divider rtl"></div>
+                <div class="item">
+                    <a href="#resume">
+                        <ion-icon name="file-tray-full-outline"></ion-icon>
+                        <p>resume</p>
+                    </a>
+                </div>
+                <div class="divider rtl"></div>
+                <div class="item">
+                    <a href="#projects">
+                        <ion-icon name="layers-outline"></ion-icon>
+                        <p>projects</p>
+                    </a>
+                </div>
+                <div class="divider rtl"></div>
+                <div class="item">
+                    <a href="#skills">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <p>skills</p>
+                    </a>
+                </div>
+                <div class="divider rtl"></div>
+                <div class="item">
+                    <a href="#contact">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <p>contact</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!------ Profile ------>
+        <div class="box profile">
+            <img class="header" src="Images v2/Main.png" alt="Profile Picture">
+            <img class="img" src="Images v2/Avatar.png" alt="logo type">
+            <h2>Abhishek Panigrahi</h2>
+            <p class="colored">Web Developer</p>
+
+            <ul>
+                <li><a href="https://www.instagram.com/_abhishek.4.7/" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://x.com/Strang3_47" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                </li>
+                <li><a href="https://github.com/Abhishek-047" target="_blank"><ion-icon
+                            name="logo-github"></ion-icon></a></li>
+                <li><a href="https://www.linkedin.com/in/abhishek-panigrahi-666b6336a" target="_blank"><ion-icon
+                            name="logo-linkedin"></ion-icon></a></li>
+            </ul>
+            <div class="footer">
+                <div class="divider rtl"></div>
+                <table>
+                    <tr>
+                        <td><a href="#resume">My Resume<ion-icon name="file-tray-full-outline"></ion-icon></a></td>
+                        <td><a href="#contact">Contact Me<ion-icon name="call-outline"></ion-icon></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!------ Main Content ------>
+
+        <div class="box content">
+            <div class="wrapper" id="rightPanel">
+
+                <h2 id="about">Hey <span class="colored">there!</span>👋🏻</h2>
+                <div class="divider rtl"></div>
+                <p>
+                    Hey, I’m Abhishek. I’m deeply interested in technology, problem-solving, and building intelligent
+                    systems. I enjoy exploring how things work under the hood — from algorithms and software systems to
+                    emerging fields like artificial intelligence and space technology.
+
+                    I like experimenting with ideas, writing code, and creating projects that challenge me to think
+                    better and build smarter. My long-term goal is to work as a software engineer or scientist,
+                    contributing to advanced technologies that can shape the future.
+                </p>
+
+                <!------ Achievements ------>
+
+                <section class="achivements">
+                    <div>
+                        <h3><ion-icon name="layers-outline"></ion-icon>0</h3>
+                        <p>Websites Designed</p>
+                    </div>
+                    <div>
+                        <h3><ion-icon name="briefcase-outline"></ion-icon>0</h3>
+                        <p>Experience</p>
+                    </div>
+                    <div>
+                        <h3><ion-icon name="rocket-outline"></ion-icon>2</h3>
+                        <p>Completed Projects</p>
+                    </div>
+                </section>
+
+                <!------ Skills Content ------>
+                <h2 id="skills">My <span class="colored">Skills</span></h2>
+                <div class="divider rtl"></div>
+
+                <section class="skills">
+                    <div><ion-icon name="logo-html5"></ion-icon>
+                        <p>HTML</p>
+                    </div>
+                    <div><ion-icon name="logo-css3"></ion-icon>
+                        <p>CSS</p>
+                    </div>
+                    <div><ion-icon name="logo-javascript"></ion-icon>
+                        <p>JavaScript</p>
+                    </div>
+                    <div><ion-icon name="logo-python"></ion-icon>
+                        <p>Python</p>
+                    </div>
+                    <div>
+                        <div class="circle" style="--percent:65%">
+                            <h4>65 <small>%</small></h4>
+                        </div>
+                        <p>C++</p>
+                    </div>
+                    <div id="moreSkillsBtn">
+                        <div class="circle" style="--percent: 40%;">
+                            <h4><small>%</small></h4>
+                        </div>
+                        <p>More Skills</p>
+                    </div>
+                    <div>
+                        <div class="progress-bar">
+                            <p>MySQL <span>85%</span></p>
+                            <progress value="85" max="100"></progress>
+                        </div>
+                        <div class="progress-bar">
+                            <p>C <span>30%</span></p>
+                            <progress value="30" max="100"></progress>
+                        </div>
+                    </div>
+                </section>
+
+                <!------ Experience Content ------>
+                <h1 id="resume">My <span class="colored">Experience</span></h1>
+                <div class="divider rtl"></div>
+                <section class="experience">
+                    <div class="experience">
+                        <h2>Position</h2>
+                        <h4>Company Name <span class="date">Date start</span> &#x26AC; <span class="date">Date
+                                end</span> </h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, autem nam sit, quos fuga
+                            voluptatum aliquam consequuntur accusamus accusantium unde repellat! Fuga molestiae
+                            obcaecati saepe ipsum quo illum voluptatum ratione.</p>
+                    </div>
+                    <div class="experience">
+                        <h2>Position</h2>
+                        <h4>Company Name <span class="date">Date start</span> &#x26AC; <span class="date">Date
+                                end</span> </h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, autem nam sit, quos fuga
+                            voluptatum aliquam consequuntur accusamus accusantium unde repellat! Fuga molestiae
+                            obcaecati saepe ipsum quo illum voluptatum ratione.</p>
+                    </div>
+                    <div class="experience">
+                        <h2>Position</h2>
+                        <h4>Company Name <span class="date">Date start</span> &#x26AC; <span class="date">Date
+                                end</span> </h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, autem nam sit, quos fuga
+                            voluptatum aliquam consequuntur accusamus accusantium unde repellat! Fuga molestiae
+                            obcaecati saepe ipsum quo illum voluptatum ratione.</p>
+                    </div>
+                </section>
+
+                <!------ Contributions Content ------>
+
+                <h1>My <span class="colored">Solving Streak</span></h1>
+                <div class="divider rtl"></div>
+                <section class="streak">
+                    <div class="wrapper">
+
+                        <div class="top-row">
+                            <select class="year-selector" onchange="applyYear(this.value)">
+                                <option value="" disabled selected>Select Year</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                            </select>
+
+                            <div class="coding-links">
+                                <a href="https://codeforces.com/profile/Abhishek047" target="_blank">
+                                    <img class="img-link" src="Images v2/image.png">
+                                </a>
+
+                                <a href="https://leetcode.com/u/Abhish3k47/" target="_blank">
+                                    <img class="img-link" src="Images v2/image copy.png">
+                                </a>
+
+                                <a href="https://www.codechef.com/users/strange_47" target="_blank">
+                                    <img class="img-link" src="Images v2/image copy 2.png">
+                                </a>
+                            </div>
+                        </div>
+                        <activity-graph range-start="2025-01-01" range-end="2025-12-31" activity-levels="0,1,2,3,5"
+                            activity-data=""></activity-graph>
+                    </div>
+                </section>
+
+                <!------ Projects Content ------>
+                <h1 id="projects">My <span class="colored">Projects</span></h1>
+                <div class="divider rtl"></div>
+
+                <section class="projects">
+
+                    <div class="project">
+                        <div class="left">
+                            <h3>Health-<span class="colored">Care</span></h3>
+                            <img src="Images v2/Health-care.png">
+                        </div>
+
+                        <div class="right">
+                            <p>A modern, responsive and user-friendly Healthcare Website designed to provide a smooth
+                                experience for users to explore healthcare features, book appointments, and connect with
+                                medical services online.</p>
+                            <div class="buttons">
+                                <button>Live View</button>
+                                <button>Code</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="projects">
+
+                    <div class="project">
+                        <div class="left">
+                            <h3>Portfolio-<span class="colored">v1</span></h3>
+                            <img src="Images v2/Portfolio.png">
+                        </div>
+
+                        <div class="right">
+                            <p>A modern, responsive, and user-friendly personal portfolio website designed to showcase
+                                my skills, projects, and achievements in a professional online presence.</p>
+                            <div class="buttons">
+                                <button>Live View</button>
+                                <button>Code</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="projects">
+
+                    <div class="project">
+                        <div class="left">
+                            <h3>Project <span class="colored">Title-3</span></h3>
+                            <img src="Images v2/Defult img.png">
+                        </div>
+
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta similique ipsam sed ipsa
+                                impedit cumque aspernatur quibusdam porro at et nihil maxime, ratione eum explicabo
+                                soluta dolores est aut iste.</p>
+                            <div class="buttons">
+                                <button>Live View</button>
+                                <button>Code</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!------ Contact Content ------>
+                <h1 id="contact">Contact <span class="colored">Me</span></h1>
+                <div class="divider rtl"></div>
+                <section>
+                    <iframe class="map" width="100%" height="300" frameborder="0"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3349.148544859166!2d85.10656558995666!3d20.115585728897862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDA2JzU2LjMiTiA4NcKwMDYnMzAuOCJF!5e1!3m2!1sen!2sin!4v1770730734639!5m2!1sen!2sin"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <form action="#" class="contact">
+                        <div>
+                            <input type="text" class="input" name="name" placeholder="Your Name..." required>
+                        </div>
+                        <div>
+                            <input type="email" class="input" name="email" placeholder="Your Email..." required>
+                        </div>
+                        <div>
+                            <textarea class="input" rows="4" name="subject" placeholder="Your Message..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit">Send Message</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="MainScript.js"></script>
+</body>
+
+</html>
