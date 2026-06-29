@@ -1,30 +1,31 @@
-# ⚡ Futuristic Portfolio
+# ⚡ Futuristic Portfolio (React v2)
 
-A personal futuristic-style portfolio website built using **pure HTML, CSS, and JavaScript**, focused on clean UI, smooth interactions, and a dashboard-like experience.
+A personal futuristic-style portfolio website focused on clean UI, smooth interactions, and a dashboard-like experience. Originally built using pure HTML, CSS, and JS, this project has been fully migrated and upgraded to a **React** architecture powered by **Vite**.
 
-This project represents my journey into modern web development with an emphasis on minimalism, performance, and real-world interaction patterns.
+This project represents my journey into modern web development with an emphasis on minimalism, component-driven design, performance, and real-world interaction patterns.
 
 ---
 
 ## 🚀 Features
 
-- **Single Page Experience (SPA-like)**
-  - Dynamic content loading without page refresh  
-  - Panels update using JavaScript DOM manipulation  
+- **Modern Single Page Application (SPA)**
+  - Dynamic content loading without page refresh using React state.
+  - Component-driven architecture for robust scalability.
 
-- **Interactive Right Panel System**
-  - Clicking sections like *More Skills* replaces content  
-  - Custom back navigation system  
+- **Interactive Dashboard System**
+  - Clicking sections like *More Skills* seamlessly swaps components in the view.
+  - Clean state management (`useState`, `useEffect`) handles navigation and theme toggling.
 
-- **Futuristic UI Design**
-  - Glassmorphism inspired layout  
-  - Neon accent color system using CSS variables  
+- **Futuristic UI Design & Dark Mode**
+  - Glassmorphism inspired layout with a premium teal (`#4FC6CE`) accent color system.
+  - Dynamic Dark and Light theme toggler.
 
-- **Keyboard Support**
-  - Press `Esc` to return to the main view  
+- **Live GitHub Heatmap Integration**
+  - Uses `react-github-calendar` to showcase a live, dynamically colored GitHub contribution streak.
+  - Custom Year selector to filter past contributions instantly.
 
 - **Fully Responsive**
-  - Works on desktop, tablet, and mobile  
+  - Optimized to work smoothly across desktop, tablet, and mobile displays.
 
 ---
 
@@ -32,54 +33,49 @@ This project represents my journey into modern web development with an emphasis 
 
 | Technology | Usage |
 |-----------|-------|
-| HTML5     | Structure |
-| CSS3      | Styling, animations, layout |
-| JavaScript (Vanilla) | Interactivity, state handling |
-| No frameworks | Pure custom logic |
+| React     | UI Library for building interactive components |
+| Vite      | Lightning fast modern build tool |
+| CSS3      | Advanced styling, flexbox layouts, animations, and CSS variables |
+| JavaScript (ES6+) | Application logic and state management |
 
 ---
 
 ## 📁 Project Structure
 
-/portfolio
-│
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│ ├── images/
-│ └── icons/
-└── README.md
+```text
+/
+├── public/                 # Static assets like images and global index.html
+│   └── Images v2/          
+├── src/                    
+│   ├── components/         # Reusable React components
+│   │   ├── Heatmap.jsx     # GitHub calendar component
+│   │   ├── MainContent.jsx # Core dynamic content area
+│   │   ├── Navbar.jsx      # Navigation & Theme toggle
+│   │   └── Profile.jsx     # Static profile sidebar
+│   ├── App.jsx             # Main container
+│   ├── index.css           # Global CSS variables and styles
+│   └── main.jsx            # React root mount
+└── package.json            # Project dependencies and scripts
+```
 
 ---
 
-## 💡 Key Concepts Used
+## 💡 Quick Start
 
-- Event listeners & DOM manipulation  
-- Dynamic content rendering  
-- Custom UI state management  
-- CSS variables & transitions  
-- Component-like architecture without frameworks  
+To run this project locally:
 
----
-
-## 🧠 Why This Project?
-
-Most beginner portfolios are static.  
-This project focuses on **interaction design** and **system thinking**, similar to how real-world dashboards and applications work.
-
-Instead of using libraries or frameworks, everything is built from scratch to deeply understand:
-- how the browser works,  
-- how UI states are managed,  
-- and how user experience is engineered.  
-
----
-
-## 🔮 Future Improvements
-
-- Fake routing using History API  
-- Animations using GSAP  
-- Project data from JSON  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Abhishek-047/Portfolio-v2-Own-.git
+   ```
+2. Navigate into the directory and install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
 ---
 

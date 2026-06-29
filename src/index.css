@@ -134,6 +134,7 @@ body.light {
 
 .profile ul li {
     display: inline;
+    margin: 0 3px;
 }
 
 .profile .footer {
