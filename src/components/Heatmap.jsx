@@ -62,8 +62,8 @@ const Heatmap = () => {
                         year={selectedYear}
                         theme={customTheme}
                         colorScheme={isLight ? "light" : "dark"}
-                        blockSize={15}
-                        blockMargin={5}
+                        blockSize={13}
+                        blockMargin={4}
                         fontSize={14}
                     />
                 </div>
